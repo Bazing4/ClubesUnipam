@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(version: 20160908142902) do
 
   create_table "clubes", force: :cascade do |t|
-    t.string   "nome"
-    t.text     "descricao"
-    t.string   "presidente"
-    t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nome",       limit: 255
+    t.text     "descricao",  limit: 65535
+    t.string   "presidente", limit: 255
+    t.string   "email",      limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
